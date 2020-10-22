@@ -14,6 +14,21 @@ We'll be creating an app that connects to [OMDB](http://www.omdbapi.com), a publ
 2. As a user, I want to see movie results based on my search query.
 3. As a user, I want to pick a movie result and see detailed information about the movie.
 
+### Needed Views
+1. Home Route
+2. Movie Detail Route
+3. Favorites Route
+
+## Routes
+VERB | URL | Action (CRUD) | Description
+---- | ------ | ------ | ------
+GET | / | Index (Read) | Show a form to search by movie title
+GET | /results | Results (Read) | List movies based on search parameters
+GET | /:id | Show (Read) | Detail page about selected movie
+GET | /favorites | Show (Read) | Show favorite movie list
+POST | /favorites | Create (Create) | add a movie to favorite movies
+DELETE | /favorites | Destroy (Delete) | remove a movie from favorite movie list
+
 ## Requirements
 1. On your home page, create a form. The form will ask for the user to input a movie title.
   * This form should have a `GET` method, with an action of `/movies`
