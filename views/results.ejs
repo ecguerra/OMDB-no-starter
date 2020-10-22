@@ -1,9 +1,10 @@
 <h1>Results Page</h1>
 
 <ul>
-    <% movies.forEach((movie,i) =>{ %>
-        <li>
+    <% movies.forEach((movie) =>{ %>
+        <li><a href="/<%= movie.imdbID %>">
             <%= movie.Title %>
+        </a>
         </li>
     <% }) %>
 </ul>

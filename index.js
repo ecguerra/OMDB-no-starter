@@ -4,7 +4,7 @@ const app = express()
 const ejsLayouts = require('express-ejs-layouts')
 const axios = require('axios')
 const fs = require('fs')
-const omdbQuery = `http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=`
+const omdbQuery = `http://www.omdbapi.com/?apikey=${process.env.API_KEY}&`
 
 app.set('view engine','ejs')
 app.use(ejsLayouts)
@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
 // Results Route
 app.get('/results',(req,res)=>{
     let titleFilter = req.query.titleFilter
-        axios.get(`${omdbQuery}${titleFilter}`)
+        axios.get(`${omdbQuery}s=${titleFilter}`)
         .then(response =>{
             // let movieTitle = response.data.Title // when it's t=
             res.render('results', {movies: response.data.Search})
@@ -39,7 +39,14 @@ app.get('/favorites',(req,res)=>{
 
 // Detail Route
 app.get('/:idx', (req,res)=>{
-    res.render('show.ejs')
+    axios.get(`${omdbQuery}i=${req.params.idx}`)
+    .then(response =>{
+        // res.send(response.data)
+        res.render('show', {movieDetail: response.data})
+    })
+    .catch(err => {
+        console.log(err)
+    })
 })
 
 app.use(express.static('public'))

@@ -1,1 +1,23 @@
-<h1>Movie Detail Page</h1>
+<h1><%= movieDetail.Title %></h1>
+<img src="<%=movieDetail.Poster%>"/>
+<h4>Released: <%= movieDetail.Year %></h4>
+<div>
+    <p>Rating: <%= movieDetail.Rated%></p>
+    <p>Runtime: <%= movieDetail.Runtime%></p>
+</div>
+<div>
+    <p>
+        Directed By: <%= movieDetail.Director %>
+    </p>
+    <p>
+        Written By: <%= movieDetail.Writer %>
+    </p>
+    <p>
+        Starring: <%= movieDetail.Actors %>
+    </p>
+</div>
+<div>
+    <p>
+        <%= movieDetail.Plot %>
+    </p>
+</div>
