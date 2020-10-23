@@ -15,9 +15,10 @@ We'll be creating an app that connects to [OMDB](http://www.omdbapi.com), a publ
 3. As a user, I want to pick a movie result and see detailed information about the movie.
 
 ### Needed Views
-1. Home Route
-2. Movie Detail Route
-3. Favorites Route
+1. Home
+2. Results
+3. Movie Detail
+4. Favorites
 
 ## Routes
 VERB | URL | Action (CRUD) | Description
