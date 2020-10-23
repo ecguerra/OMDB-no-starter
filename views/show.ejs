@@ -32,6 +32,8 @@
         <% } %>
     </p>
     <p>
-        Rotten Tomatoes Rating: <%= movieDetail.Ratings[1].Value %>
+        <% if(movieDetail.Ratings) { %>
+            Rotten Tomatoes Rating: <%= movieDetail.Ratings[1].Value %>
+        <% } %>
     </p>
 </div>
