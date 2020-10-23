@@ -1,0 +1,68 @@
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border-blue {
+    border: 1px solid blue;
+}
+
+:root {
+    --claret: #6E0D25;
+    --gainsboro: #D8DBE2;
+    --rich-black: #01161E;
+    --cadet-blue: #58A4B0;
+    --midnight-green: #124559;
+}
+
+body {
+    font-family: 'Teko', sans-serif;
+    background-color: whitesmoke;
+    color: var(--rich-black);
+
+}
+
+h1,h3 {
+    font-family: 'Bungee', cursive;
+}
+
+header {
+    color: var(--gainsboro);
+    background-color: var(--claret);
+}
+
+header a:link, header a:visited {
+    color: var(--gainsboro);
+}
+
+a:link {
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    color: var(--midnight-green);
+
+}
+
+a:visited {
+    color: var(--cadet-blue);
+}
+
+input[type=text]{
+    border: none;
+    font-family: 'Teko', sans-serif;
+    color: var(--rich-black);
+}
+
+input[type=submit] {
+    border: none;
+    color: var(--claret);
+    background-color: var(--gainsboro);
+    font-family: 'Teko', sans-serif;
+}
+
+input[type=submit]:hover {
+    border: none;
+    color: var(--gainsboro);
+    background-color: var(--claret);
+    font-family: 'Teko', sans-serif;
+}
