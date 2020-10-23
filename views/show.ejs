@@ -21,3 +21,17 @@
         <%= movieDetail.Plot %>
     </p>
 </div>
+<div>
+    <p>
+        IMDB Rating: 
+        <% for(i=0; i< parseInt(movieDetail.imdbRating); i++) { %>
+            <i class="fas fa-star"></i>
+        <% } %>
+        <% for(i=0; i< 10-parseInt(movieDetail.imdbRating); i++) { %>
+            <i class="far fa-star"></i>
+        <% } %>
+    </p>
+    <p>
+            Rotten Tomatoes Rating: <%= movieDetail.Ratings[1].Value %>
+    </p>
+</div>
